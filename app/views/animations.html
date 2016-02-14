@@ -1,0 +1,115 @@
+<div ng-controller="AnimationCtrl" ng-init="bool=true;craValide=true;">
+  <div>
+<!--  #####################  DEBUT ROW  #################### -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <img ng-if="bool" ng-src="images/task.ico" title="A babe" shake-that class="icon50">
+
+        <div class="container center">
+          <button class="btn btn-primary btn-xs" ng-click="test.bigger = !test.bigger">
+          </button>
+          <button class="btn btn-primary btn-xs" ng-click="test.lightTheme = !test.lightTheme">
+          </button>
+          <h3 class="title box" ng-class="{ 'bigger': test.bigger, 'light-theme': test.lightTheme }" >Mes Animes... </h3>
+        </div>
+      </div>
+    </div>
+<!--  #####################  DEBUT ROW  #################### -->
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><!-- btn btn-primary btn-md -->
+        <button class="btn btn-primary btn-xs" ng-click="test.bigger = !test.bigger">bigger = {{ !test.bigger }}</button>
+        <button class="btn btn-primary btn-xs" ng-click="test.lightTheme = !test.lightTheme">lightTheme = {{ !test.lightTheme }}</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click="craValide = !craValide"> Button hide show</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click="toggle = !toggle"> Button 4</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 5</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 6</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 7</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 8</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 8</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 9</button>
+        <button class="btn btn-primary btn-xs" type="button" ng-click=""> Button 10</button>
+      </div>			
+    </div>
+		
+<!--  #####################  FIN ROW  #################### -->
+
+	<fieldset>
+		
+		 <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h4 class="center">Les jours travaillés</h4>
+				<div class="validCra center" ng-animate="animate" ng-show="craValide" >
+				<strong>Cra Valid YES</strong>
+			</div>
+			<div  class="invalidCra center" ng-animate="animate" ng-show="!craValide" >
+				<strong>Cra non terminé : <span> {{ ligneEnErreur }}</span></strong>
+			</div>
+			<div class="box2"></div>
+      <br />
+			<button class="btn btn-primary btn-xs" ng-click="animeEnCours = !animeEnCours">Anime</button>
+        <h2 ng-show="animeEnCours">Le Javascript c'est formidable</h2>
+        <br />
+
+			</div>   
+		</div>
+
+<!--  #####################  DEBUT ROW  #################### -->
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<button type="button" class="btn btn-primary btn-sm" data-animation="am-slide-left" data-placement="left" bs-aside="aside">aside from left<br><small>(slide-left)</small></button>
+				<button type="button" class="btn btn-success btn-sm" data-animation="am-fade-and-slide-right" data-placement="right" bs-aside="aside">aside from right<br><small>(am-fade-and-slide-right)</small></button>
+				<div ng-class="{on:onOff}" class="highlight" class="inline-block" >Highlight box
+      </div>
+			<div ng-if="bool" class="shake" class="inline-block">
+            shake me in out
+			</div>
+			</div>
+			
+		</div>
+	
+	      
+			
+  <!--  #####################  DEBUT ROW  #################### -->
+	
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="container">
+					<div class="panel panel-default panel-success">
+						<div class="panel-heading center"><H3><span class="label label-success">Olive Panel	</span></H3></div>
+							<div class="panel-body text-center">
+								<div class="list-group">
+									<a href="" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+									<a href="" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+									<a href="" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+									<a href="" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+								</div>
+								<div id="ctrl" class="center-block">
+									<label for="numsel">Select Number：</label>
+									<select id="numsel">
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+									</select>
+									<button class="btn btn-default" id="start" value="start">Start</button>
+									<label for="step">Step：</label> <span class="badge" id="step">0</span>  
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>   
+		</div>
+   
+	 
+<!--  #####################  FIN ROW  #################### -->
+
+
+      <div class="box1 on center" ng-show="toggle" ng-animate="'box1'">On</div>
+      <div class="box1 off center" ng-hide="toggle" ng-animate="'box1'">Off</div>
+    </fieldset>
+
+  </div>
+
+</div>

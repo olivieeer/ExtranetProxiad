@@ -1,0 +1,181 @@
+
+<div ng-controller="CraEcranBCtrl">
+<form novalidate role="form" name="craForm" class="css-form form-inline well">
+  <div class="row">
+	<div class="col-lg-12">
+		<img ng-src="images/parasol.ico" alt="CRA" class="icon50 img-responsive">
+		<div class="container">
+			<h3>Mon compte rendu d'activités de Novembre 2015</h3>
+		</div>
+	</div>
+  </div>
+  <fieldset>
+	<div class="row center">
+	  <div class="col-lg-12">
+
+        <div ng-if="!isEnErreur" class="success center">
+			Cra Valid YES
+        </div>
+
+        <div ng-if="isEnErreur" class="alert alert-danger danger center">
+          Cra non terminé :
+          <span> {{ ligneEnErreur }}</span>
+        </div>
+		
+		<div class="table-responsive">
+			<table class="table tabCra table-striped table-bordered table-condensed table-hover" border="1">
+				<caption>
+					<div class="container">
+						<h4>Les jours travaillés</h4>
+					</div>
+				</caption>
+			<thead>
+				<tr>
+					<th ng-repeat="item in headerMission" class="{{ item.class }}" ng-click="headerCraToToggle(item);setItemLignreCraToComplete(item.label)">{{ item.label }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="ligneCra in lignesCra">
+					<td ng-repeat="item in ligneCra" class="{{ item.class }}">
+						<ng-form name="itemForm">
+							<div ng-if="item.hasImage">
+								<div ng-if="item.image.src != '' ">
+									<img ng-src="{{item.image.src}}" title="{{item.ligneCraNumber}}" class="ligneCraImage" ng-click="lignesCra.splice(ligneCra.ligneCraNumber,1)" />
+								</div>
+							</div>
+							<div ng-if="item.hasInput && item.isDay && !item.disabled" class="form-group">
+								<input type="text" name="{{ item.name }}" ng-pattern="/^((0(\.[0-9]*)?)|(1(\.0)?))$/"  ng-model="item.data" class="{{ item.class }}" ng-blur="calculNbJoursTravail();validDayForm(this)"/>
+							</div>
+							<div ng-messages="craForm.item.name.$error" class="errors">
+								<span ng-message="required">Required!</span>
+								<span ng-message="min">Too small!</span>
+								<span ng-message="pattern">Paattern!</span>
+							</div>
+							<div ng-if="item.hasInput && item.isDay && item.disabled " class="form-group">
+
+							</div>
+							<div ng-if="item.hasInput && !item.isDay" class="form-group">
+								<input type="text" name="{{ item.name }}" ng-model="item.data"/>
+							</div>
+						</ng-form>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6 form-group">
+			<button class="btn btn-primary btn-md raised" type="button" ng-click="addMissionToCraForm()" ><span class="glyphicon glyphicon-plus"></span>  Ajouter mission</button>
+			<button class="btn btn-primary btn-md raised" ng-disabled="!craForm.$valid" type="button" ng-click="validForm()" ><span class="glyphicon glyphicon-plus"></span>  Valider mission</button>
+	    </div>
+		<div class="col-lg-6">
+			&nbsp;
+	    </div>
+	</div>
+    <div class="row">
+	  <div class="col-lg-12">
+		<div class="table-responsive">
+			<table class="table tabCra table-striped table-bordered table-condensed table-hover">
+			<caption>
+				<div class="container">
+				  <h4>Proxiad Absence et formation</h4>
+				</div>
+			</caption>
+			<thead>
+			<tr>
+			  <th ng-repeat="item in headerAbsence" class="{{item.class}}" ng-click="headerAbsenceToToggle(item)" >{{item.label}}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="ligneAbsence in lignesAbsence">
+			  <td ng-repeat="item in ligneAbsence" class="{{item.class}}" >
+          <ng-form name="itemForm">
+            <div ng-if="item.hasImage">
+            <img ng-src="{{item.image.src}}" alt="Absence" class="ligneCraImage" title="{{item.ligneAbsenceNumber}}" ng-click="lignesAbsence.splice(item.ligneAbsenceNumber,1)" />
+            </div>
+            <div ng-if="item.hasInput && item.isDay && !item.disabled" class="form-group">
+				<input type="text"  name="item" ng-pattern="/^(0(\.\d+)?|(1(\.0)?))$/" ng-model = "item.data" ng-blur="calculNbJoursNonTravailles();validDayForm(event)"/>
+            </div>
+            <div ng-if="item.hasInput && item.isDay && item.disabled">
+
+            </div>
+            <div ng-if="item.hasInput && !item.isDay" class="form-group">
+            <input type="text"  name="item" ng-model = "item.data"/>
+            </div>
+          </ng-form>
+			  </td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6 form-group">
+				<select  id="example-simulate-single" ng-model="cra.type2" id="sel2" ng-options="type.name for type in types" class="form-control" ng-required="true"></select>
+			  <button class="btn btn-primary btn-md raised" ng-click="addAbsence()" ><span class="glyphicon glyphicon-plus"></span>  Ajouter Absence</button>
+			<button class="btn btn-primary btn-md raised" ng-click="validerAbsence()" ng-disabled="!(lignesAbsence.length > 0)"><span class="glyphicon glyphicon-plus"></span>  Valider Absence</button>
+		</div>
+		<div class="col-lg-6">
+			<div class="table-responsive">
+			<table class="table tab table-striped table-bordered table-condensed table-hover">
+				<caption>
+					<div class="container">
+					  <h4 class="center">Récapitulatif</h4>
+					</div>
+				</caption>
+				<thead>
+				<tr>
+				  <th>Type de congés</th>
+				  <th>Solde</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				  <td>nombre de jours ouvrés</td>
+				  <td>{{ nbJoursOuvres }}</td>
+				</tr>
+				<tr>
+				  <td>nombre de jours travaillés</td>
+				  <td>{{ nbJoursTravailles }}</td>
+				</tr>
+				<tr>
+				  <td>nombre de jours de congés</td>
+				  <td>{{ nbJoursNonTravailles }}</td>
+				</tr>
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+
+
+    </fieldset>
+
+    <div class="row">
+	  <div class="col-lg-3 center">
+		<button class="btn btn-primary btn-md"><span class="glyphicon glyphicon-print"></span>&nbsp;&nbsp;Imprimer Cra</button>
+	  </div>
+	  <div class="col-lg-3 center">
+		<button class="btn btn-primary btn-md raised"><span class="glyphicon glyphicon-euro"></span>&nbsp;&nbsp;Générer note de frais</button>
+	  </div>
+	  <div class="col-lg-3 center">
+		<button class="btn btn-primary btn-md form-control" ng-click="save()" ng-disabled="!validForm()"><span class="glyphicon glyphicon-saved"></span>&nbsp;&nbsp;Sauvegarder</button>
+	  </div>
+	  <div class="col-lg-3 center">
+		<button class="btn btn-primary btn-md" ng-disabled="!validForm()"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Envoyer à Géraldine</button>
+	  </div>
+    </div>
+
+
+
+  <!--<pre>{{lignesCra | json}}</pre>-->
+  <!--<br />-->
+  <!--<pre>master = {{master | json}}</pre>-->
+
+</form>
+</div>

@@ -1,0 +1,942 @@
+/*
+==============================================
+slideLeft
+==============================================
+*/
+
+
+.slideLeft{
+  animation-name: slideLeft;
+  -webkit-animation-name: slideLeft;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(150%);
+  }
+  50%{
+    transform: translateX(-8%);
+  }
+  65%{
+    transform: translateX(4%);
+  }
+  80%{
+    transform: translateX(-4%);
+  }
+  95%{
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(150%);
+  }
+  50%{
+    -webkit-transform: translateX(-8%);
+  }
+  65%{
+    -webkit-transform: translateX(4%);
+  }
+  80%{
+    -webkit-transform: translateX(-4%);
+  }
+  95%{
+    -webkit-transform: translateX(2%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.header form{
+    margin-bottom: 5px;
+}
+
+/* Supporting movies content */
+
+.movies-container ul.movies{
+    list-style: none;
+}
+
+.movies-container ul.movies > li{
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.movie_detail ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.movie_detail dt{
+    width: 80px;
+}
+
+.movie_detail dd{
+    margin-left: 100px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Images and Icons */
+#proxiad_logo {
+  width: 400px;
+  height: 400px;
+}
+
+#proxiad_logo1 {
+  width: 284px;
+  height: 128px;
+}
+#proxiad_logo2 {
+  width: 896px;
+  height: 201px;
+}
+/*#paletteColor {*/
+  /*!*width: 184px;*!*/
+  /*!*height: 52.5px;*!*/
+  /*width: 190px;*/
+  /*height: 55px;*/
+  /*display: inline-block;*/
+/*}*/
+
+.fadeOut-add{
+  opacity:0;
+}
+.itemPalette:hover {
+  opacity:1;
+  background-color: #00A000;
+}
+.fadeOut{
+  opacity:0;
+}
+
+.colorPalette {
+  font-family: "Arial Black";
+  font-size: 16px;
+  width: 60px;
+  height: 40px;
+  display: inline-block;
+}
+.colorPalette:hover {
+  cursor:pointer;
+}
+
+.panel {
+    min-width:400px;
+}
+#stage {
+    margin-bottom:15px;
+}
+#start {
+    margin-left:20px;
+    margin-right:20px;
+}
+.wrapper1 {
+  border: 1px white solid;
+	-webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+div .white {
+  color: ffffff; 
+  background-color: white;
+}
+.Sonic_silver{
+  background-color: #757575;
+}
+div .middleGrey {
+  background-color: #9d9c98;
+}
+div .darkGrey {
+  /*border-right: 2px solid grey;*/
+  background-color: #605f59;
+}
+.activated {
+  font-color: green;
+}
+
+.orange  {
+  background-color: #ea8929;
+}
+.inline-block {
+  display: inline-block;
+}
+.icon20 {
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.iconHtDePage {
+	position: relative;
+  top: 50px;
+  left: 5px;
+}
+.icon50 {
+	float: left;
+  width: 60px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.icon_title {
+  position: relative;
+  top: 20%;
+  left: 15%;
+}
+
+.icon {
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+
+.icon25 {
+  float: left;
+  width: 25px;
+  height: 25px;
+}
+.babe {
+  float: left;
+  width: 120px;
+  height: 90px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+}
+.babe:hover {
+  width: 200px;
+  height: 150px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.babeJillian {
+  float: left;
+  width: 110px;
+  height: 150px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.babeJillian:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.babeMonica {
+  float: left;
+  width: 91px;
+  height: 138px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.babeMonica:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/* Texts content */
+
+fieldset {
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid grey;
+}
+
+.text14 {
+  font-size: 14px;
+}
+
+.text12 {
+  font-size: 12px;
+}
+
+.right {
+  text-align: right;
+}
+.craInput {
+  /*background-color: #CECECE;*/
+  background-color: orangered;
+}
+
+.craInputWe {
+  /*background-color: #303030;*/
+  background-color: deeppink;
+}
+
+.center {
+  align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.erreur{
+  /*display: none;*/
+  width: 130px;
+  height: 70px;
+  border: 1px solid red;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+}
+
+.erreur.ng-hide {
+  opacity:0;
+}
+
+.erreur2{
+  /*display: none;*/
+  width: 200px;
+  height: 80px;
+  background-color: lightskyblue;
+}
+
+.cssSlideUp {
+  transition: .5s linear all;
+  height: 80px;
+  overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+  height:0;
+}
+
+.ligneCraImage {
+  width: 30px;
+  height: 30px;
+}
+
+input {
+  vertical-align: bottom;
+}
+/*table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0% 0% 0% 0%;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.tabCra
+{
+  margin: 0% 0% 0% 0%;
+  border-collapse: collapse;
+  border-spacing: 0%;
+  border-padding: 0%;
+}
+
+table td, th
+{
+  spacing: 0%;
+  height:auto;
+  padding: 0%;
+  width: 100%;
+	text-align: center;
+  background-color: #ccc;
+}
+
+table.tabCra
+{
+  width: 50%;
+  border: 1px solid grey;
+  opacity: 1;
+}
+
+table.tabCra th.thHeaderCell {
+	height:32px;
+  background-color: grey;
+}
+
+table.tabCra th.thHeaderToggle {
+  background-color: green;
+  opacity: 0.5;
+}
+
+
+table td, th
+{
+  width: 30px;
+  height: 30px;
+  margin: 0% 0% 0% 0%;
+  background-color: #ccc;
+}
+
+*/
+/*table.tabCra
+{
+  spacing: 0%;
+  height:auto;
+  padding: 0%;
+  background-color: #ccc;
+}
+th {
+  background-color: lightgreen;
+}
+table.tabCra td
+{
+  width: 10px;
+  height: 100%;
+  margin: 0% 0% 0% 0%;
+
+}*/
+
+table.tab
+{
+  padding: 0%;
+  width: 95%;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+table.tab td, th
+{
+  height:auto;
+  width: 25%;
+}
+
+table.tabCra
+{
+  border: 1px solid grey;
+  border-spacing: 5%;
+  /*border-padding: 2%;*/
+  opacity: 1;
+  font-family: Tahoma, Open Sans, Helvetica, sans-serif;
+  font-size: 14px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 2px grey;
+  -webkit-box-shadow: 0 1px 2px grey;
+  box-shadow: 0 1px 2px grey;
+  z-index: 1000;
+}
+
+table.tabCraInError
+{
+  border: 1px solid red;
+  opacity: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#666;
+  background-color: red;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 2px red;
+  -webkit-box-shadow: 0 1px 2px red;
+  box-shadow: 0 1px 2px red;
+}
+.invalidCra {
+  width: 25%;
+  height: 50px;
+  vertical-align: middle;
+  border: 1px solid red;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  opacity: 1;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.box1 { color: white; text-align: center; width: 100px; height: 100px; font-size: 50px; vertical-align: bottom;}
+.on  { background-color: orange; }
+.off { background-color: red; }
+
+
+.box1-show-setup, .box1-hide-setup {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+.box1:hover {
+  background-color: #FFCCCC;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.box2 {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box2:hover {
+  background-color: #FFCCCC;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.fold {
+  animation: fold 400ms ease-in-out;
+}
+
+.fold.ng-touched {
+  transition:5s linear all;
+  opacity:1;
+}
+/* The starting CSS styles for the enter animation */
+.fold.ng-enter {
+  transition:5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fold.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+@keyframes fold {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+
+
+.shake {
+  animation: shake 400ms ease-in-out;
+}
+
+.shake.ng-touched {
+  transition:5s linear all;
+  opacity:1;
+}
+/* The starting CSS styles for the enter animation */
+.shake.ng-enter {
+  transition:5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.shake.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+@keyframes shake {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+
+.text_bold {
+  font-weight: bold;
+ }
+.validCra {
+  background-color: #c9c1b8;
+  width: 15%;
+  height: 50px;
+  align: right;
+  vertical-align: middle;
+}
+table.tabCra th {
+  text-align:center;
+  background-color: grey;
+  opacity: 1;
+  color: white;
+}
+table.tabCra th.headerWe {
+  background-color: #30273a;
+  color: lightgrey;
+}
+
+table.tabCra th.thHeaderToggle {
+  background-color: limegreen;
+}
+table.tabCra th.thHeaderToggle:hover {
+  background-color: #002451;
+}
+table.tabCra th.thHeaderInError {
+  background-color: red;
+  width: 50px;
+}
+
+table.tabCra td.tdInError {
+  background-color: red;
+  width: 50px;
+}
+table.tabCra th.thHeaderCell:hover {
+  background-color: #1b181b;
+}
+table.tabCra td.we {
+  background-color: red;
+}
+table.tabCra td.cellType
+{
+  background-color: #5A5E6B;
+}
+table.tabCra td.dayType
+{
+  background-color: #798081;
+}
+
+table.tabCra td.weType {
+  background-color: #5A5E6B;
+}
+input[type="text"].red {
+  background-color: yellow;
+  font-color:red;
+  width: 24px;
+}
+input[type="text"] {
+    border-top:    1px solid #103D4E;
+    border-left:   1px solid #103D4E;
+    border-bottom: 1px solid #597885;
+    border-right:  1px solid #597885;
+    background-color: white;
+    width: 24px;
+}
+
+input{
+    /* Une couleur plus sombre que l'arrière-plan */
+    border-top:    1px solid #103D4E;
+    border-left:   1px solid #103D4E;
+    /* Une couleur plus claire que l'arrière-plan */
+    border-bottom: 1px solid #597885;
+    border-right:  1px solid #597885;
+}
+
+input[type="text"].dayType {
+  background-color: white;
+  width: 1px;
+}
+input[type="text"].tdCell {
+  width: 50px;
+}
+.box {
+  border:1px solid #999;
+  margin-top:15px;
+  padding:15px;
+  border-radius:4px;
+  background:#969696;
+  color:#fff;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.box.bigger {
+  font-size:30px;
+}
+
+.box.light-theme {
+  background:#eee;
+  color:#333;
+}
+
+.boxCraValide {
+  margin:10px 0 20px 0;
+  padding:10px;
+  border:1px solid rgba(0,0,0,0.2);
+  background:#f00;
+  color:#fff;
+  border-radius:4px;
+
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.boxCraValide.ng-hide {
+  opacity:0;
+  /* transform: scale(0.8); */
+}
+
+/* when hiding the picture */
+.ng-hide-add         { animation:0.5s lightSpeedOut ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s flipInX ease; }
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+    transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+/* light speed out */
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+/*textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-    input:focus {
+  border-color: dodgerblue;
+  box-shadow: steelblue;
+  -webkit-box-shadow: lightsteelblue;
+  outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+table.tabCra td.tdDayNotDisabled {
+  background-color: #BFBFBF;
+  /*background-color: blue;*/
+  margin: 20px 20px 20px 20px;
+  pagging: 20px 20px 20px 20px;
+}
+
+table.tabCra td.tdDayNotDisabled:hover {
+  background-color: grey;
+  border: 2px solid darkslategray;
+  border-top: 2px solid darkslategray;
+  border-bottom: 2px solid darkslategray;
+  /*background-color: blue;*/
+  margin: 20px 20px 20px 20px;
+  pagging: 20px 20px 20px 20px;
+}
+table.tabCra td.tdDayDisabled {
+  background-color: #30273a;
+}
+
+table.tabCra td.gold {
+  background-color: gold;
+}
+
+.modal-content {
+  width: 200px;
+  height: 70px;
+  background-color: yellow;
+}
+/* Validation content */
+.my-form input.ng-invalid.ng-touched {
+  background-color: #FA787E;
+}
+
+.my-form input.ng-valid.ng-touched {
+  background-color: #78FA89;
+}
+
+.my-form {
+/*   transition:0.5s linear all; */
+  background: white;
+}
+.my-form.ng-invalid {
+  color:white;
+}
+.ng-invalid { border: 1px solid green; }
+.myBody { }
+.notification-bar { position:fixed; bottom:2em; left:2em; width:8em;}
+.notification-message {
+  min-height: 1.5em;
+  margin-top:3px;
+  opacity:0;
+  width:100%;
+  text-align:center;
+  background-color:cornflowerblue;
+  color:white;
+  border: solid 1px transparent;
+  -webkit-transition:opacity 1s ease-in-out;
+  -moz-transition:opacity 1s ease-in-out;
+  -o-transition:opacity 1s ease-in-out;
+  transition:opacity 1s ease-in-out;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  padding:3px;
+}
+.notification-message.show { opacity:1; }
+.notification-message.red { background-color:red; }
+.notification-message > a {float:right; color:white;}
+.notification-message > div { font-size:smaller; }
+.notification-message:hover { border: solid 1px white; }
+
+.animate-enter,
+.animate-leave
+{
+  -webkit-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space:nowrap;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  width: 1000px;
+  height: 100px;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+  opacity: 1;
+  width: 150px;
+  height: 30px;
+}
+
+.animate-enter { /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

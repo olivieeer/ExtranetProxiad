@@ -1,0 +1,13 @@
+[
+  "types": 
+		{ name : "Congés payés",
+		  name : "Congés exceptionnels",
+		  name : "RTT"
+		},
+   "nbJoursCongesRestant" : 10,
+   
+   "nbJoursRttRestant" 	   : 3
+]
+
+
+ 

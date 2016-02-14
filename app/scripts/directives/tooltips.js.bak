@@ -1,0 +1,18 @@
+'use strict';
+
+/**
+ * @ngdoc directive
+ * @name firstAppApp.directive:tooltips
+ * @description
+ * # tooltips
+ */
+angular.module('firstAppApp')
+  .directive('tooltips', function () {
+    return {
+      template: '<div></div>',
+      restrict: 'E',
+      link: function postLink(scope, element, attrs) {
+        element.text('this is the tooltips directive');
+      }
+    };
+  });

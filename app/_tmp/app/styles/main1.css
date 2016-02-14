@@ -1,0 +1,535 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.header form{
+    margin-bottom: 5px;
+}
+
+/* Supporting movies content */
+
+.movies-container ul.movies{
+    list-style: none;
+}
+
+.movies-container ul.movies > li{
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.movie_detail ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.movie_detail dt{
+    width: 80px;
+}
+
+.movie_detail dd{
+    margin-left: 100px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Images and Icons */
+
+.icon20 {
+  width : 20px;
+  height : 20px;
+  float : left;
+}
+
+.icon50 {
+  float : left;
+  width : 50px;
+  height : 50px;
+}
+
+.icon_title {
+  position : relative;
+  top : 20%;
+  left : 15%;
+}
+
+.icon {
+  float : left;
+  width : 25px;
+  height : 25px;
+}
+
+.icon25 {
+  float : left;
+  width : 25px;
+  height : 25px;
+}
+
+/* Texts content */
+
+fieldset {
+  padding : 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  border : 1px solid grey;
+}
+
+.text14 {
+  font-size: 14px;
+}
+
+.text10 {
+  font-size: 10px;
+}
+.text8 {
+  font-size: 8px;
+}
+.right {
+  text-align: right;
+}
+.craInput {
+  font-size: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #CECECE;
+}
+
+.craInputWe {
+  background-color: #303030;
+}
+.red {
+  font-size: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #FA5858;
+}
+
+.greyClass {
+  background-color: #CECECE;
+}
+
+
+.center {
+  align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tables content */
+.erreur{
+  /*display: none;*/
+  width : 130px;
+  height : 70px;
+  background-color : pink;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.erreur.ng-hide {
+  opacity:0;
+}
+
+.erreur2{
+  /*display: none;*/
+  width : 200px;
+  height : 80px;
+  background-color : lightskyblue;
+}
+
+.cssSlideUp {
+  transition: .5s linear all;
+  height: 80px;
+  overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+  height:0;
+}
+
+.ng-hide-add, .ng-hide-remove {
+  /* ensure visibility during the transition */
+  display: block !important; /* yes, important */
+}
+
+.ligneCraImage {
+  float : left;
+  width : 25px;
+  height : 25px;
+}
+
+/*table, caption, tbody, tfoot, thead, tr, th, td {
+  margin : 0% 0% 0% 0%;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.tabCra
+{
+  margin : 0% 0% 0% 0%;
+  border-collapse: collapse;
+  border-spacing : 0%;
+  border-padding : 0%;
+}
+
+table td, th
+{
+  spacing : 0%;
+  height :auto;
+  padding : 0%;
+  width : 100%;
+  background-color : #ccc;
+}
+
+table.tabCra
+{
+  width : 50%;
+  border: 1px solid grey;
+  opacity: 1;
+}
+
+table.tabCra th.thHeaderCell {
+  text-align: center;
+  background-color: grey;
+}
+
+table.tabCra th.thHeaderToggle {
+  background-color: green;
+  opacity: 0.5;
+}
+
+
+table td, th
+{
+  width : 30px;
+  height : 30px;
+  margin : 0% 0% 0% 0%;
+  background-color : #ccc;
+}
+
+*/
+/*table.tabCra
+{
+  spacing : 0%;
+  height :auto;
+  padding : 0%;
+  background-color : #ccc;
+}
+th {
+  background-color : lightgreen;
+}
+table.tabCra td
+{
+  width : 10px;
+  height : 100%;
+  margin : 0% 0% 0% 0%;
+
+}*/
+
+table.tab
+{
+
+  padding : 0%;
+  width : 5%;
+}
+
+table.tab td, th
+{
+
+  height :auto;
+  width : 5%;
+}
+
+table.tabCra
+{
+  border: 1px solid grey;
+  opacity: 1;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#666;
+  font-size:12px;
+  border:#ccc 1px solid;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+
+table.tabCraInError
+{
+  border: 1px solid grey;
+  opacity: 1;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#666;
+  font-size:12px;
+  background-color: red;
+  border:#ccc 1px solid;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+.danger {
+  background-color: red;
+  width: 25%;
+  height: 50px;
+  align: right;
+  vertical-align: middle;
+}
+table.tabCra th {
+  text-align:center;
+  background-color: grey;
+  opacity: 1;
+  font-size: 13px;
+  color: white;
+  font-family: Arial, Georgia, Serif;
+}
+table.tabCra th.headerWe {
+  background-color: #303030;
+  color: black;
+}
+table.tabCra th.thHeaderCell2, table.tabCra th.thHeaderCell3 {
+  color: white;
+}
+table.tabCra th.thHeaderToggle {
+  background-color: lightgreen;
+}
+table.tabCra th.thHeaderInError {
+  background-color: red;
+  width: 50px;
+}
+
+table.tabCra td.tdInError {
+  background-color: red;
+  width: 50px;
+}
+table.tabCra th:hover {
+  background-color: orange;
+}
+table.tabCra td.we {
+  background-color: red;
+}
+table.tabCra td.cellType
+{
+  background-color: #5A5E6B;
+}
+table.tabCra td.dayType
+{
+  background-color: #798081;
+}
+
+table.tabCra td.weType {
+  background-color: #5A5E6B;
+}
+input[type="text"].red {
+  background-color : yellow;
+  font-color :red;
+  width : 24px;
+}
+input[type="text"] {
+  background-color : white;
+  width : 24px;
+}
+input[type="text"].dayType {
+  background-color : white;
+  width : 1px;
+}
+input[type="text"].inError {
+  background-color : white;
+  width : 35px;
+}
+
+table.tabCra td.tdDayNotDisabled {
+  background-color: #BFBFBF;
+  /*background-color: blue;*/
+  margin: 20px 20px 20px 20px;
+  pagging: 20px 20px 20px 20px;
+}
+
+table.tabCra td:hover
+{
+  background-color: white;
+  border: 2px solid #696969 !important;
+  border-top: 2px solid #00BFFF;
+  border-bottom: 2px solid #00BFFF;
+}
+
+
+table.tabCra td.tdDayNotDisabled:hover {
+  background-color: lightblue;
+  /*background-color: blue;*/
+  margin: 20px 20px 20px 20px;
+  pagging: 20px 20px 20px 20px;
+}
+table.tabCra td.tdDayDisabled {
+  background-color: #7F7F7F;
+}
+
+table.tabCra td.gold {
+  background-color: blue;
+}
+
+table.tabCra td.tdDayNotDisabled:hover
+{
+  margin: 20px 20px 20px 20px;
+  pagging: 20px 20px 20px 20px;
+  background-color: orange;
+  border: 2px solid darkred;
+}
+
+.modal-content {
+  width: 200px;
+  height : 70px;
+  background-color: yellow;
+}
+/* Validation content */
+.css-form input.ng-invalid.ng-touched {
+  background-color: #FA787E;
+  /*border: 1px solid red;*/
+}
+
+.css-form input.ng-valid.ng-touched {
+  background-color: #78FA89;
+  /*background-color: lightgreen;  */
+}
+
+.ng-invalid { border: 1px solid red; }
+.myBody { }
+.notification-bar { position:fixed; bottom:2em; left:2em; width:8em;}
+.notification-message {
+  min-height: 1.5em;
+  margin-top:3px;
+  opacity:0;
+  width:100%;
+  text-align:center;
+  background-color:cornflowerblue;
+  color:white;
+  border: solid 1px transparent;
+  -webkit-transition:opacity 1s ease-in-out;
+  -moz-transition:opacity 1s ease-in-out;
+  -o-transition:opacity 1s ease-in-out;
+  transition:opacity 1s ease-in-out;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  padding:3px;
+}
+.notification-message.show { opacity:1; }
+.notification-message.red { background-color:red; }
+.notification-message > a {float:right; color:white;}
+.notification-message > div { font-size:smaller; }
+.notification-message:hover { border: solid 1px white; }
+
+.animate-enter,
+.animate-leave
+{
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space:nowrap;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+  opacity: 1;
+  width: 150px;
+  height: 30px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
