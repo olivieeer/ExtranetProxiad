@@ -1,0 +1,215 @@
+.header form{
+    margin-bottom: 5px;
+}
+
+.movies-container ul.movies{
+    list-style: none;
+}
+
+.movies-container ul.movies > li{
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.movie_detail ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.movie_detail dt{
+    width: 80px;
+}
+
+.movie_detail dd{
+    margin-left: 100px;
+}
+
+fieldset {
+    padding : 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    border : 1px solid grey;
+}
+
+.text14 {
+  font-size: 14px;
+}
+
+.text10 {
+  font-size: 10px;
+}
+.text8 {
+  font-size: 8px;
+}
+.right {
+  text-align: right;
+}
+.craInput {
+  font-size: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #CECECE;
+}
+
+.craInputWe {
+  background-color: #303030;
+}
+.red {
+  font-size: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #FA5858;
+}
+
+.greyClass {
+  background-color: #CECECE;
+}
+
+.icon50 {
+  float : left;
+  width : 50px;
+  height : 50px;
+}
+
+.icon20 {
+  width : 20px;
+  height : 20px;
+  float : left;
+}
+
+.icon_title {
+  position : relative;
+  top : 20%;
+  left : 15%;
+}
+
+/*
+background-color : #EDEDED #BABABA Etain
+Argent	#CECECE
+Perle	#C7D0CC
+Pinchard	#CCCCCC
+Acier	#AFAFAF
+Souris	#9E9E9E
+Fer	#7F7F7F
+Plomb	#798081
+Payne	#677179
+Ardoise	#5A5E6B
+Gris	#606060 #BFBFBF
+Anthracite	#303030
+Taupe	#463F32
+Bis	#766F64
+Grège	#BBAE98
+Tourterelle	#BBACAC
+background-color : Fumée	#BBD2E1
+*/
+table.tabCra th
+{
+  width : 10px;
+  margin : 0% 0% 0% 0%;
+  background-color : #ccc;
+}
+table.tabCra td
+{
+  width : 5px;
+  margin : 0% 0% 0% 0%;
+  background-color : #ccc;
+}
+table.tabCra th.thHeader {
+  width: 50px;
+  height : 10px;
+  background-color: grey;
+}
+table.tabCra th.thHeaderCell {
+  width: 1px;
+  height : 10px;
+  background-color: grey;
+}
+table.tabCra th.thHeaderCell1 {
+  width: 100px;
+  height : 10px;
+  background-color: red;
+}
+
+table.tabCra th.thHeaderCell2 {
+  width: 50px;
+  height : 10px;
+  background-color: grey;
+}
+
+table.tabCra th.thHeaderCell3 {
+  width: 1px;
+  height : 10px;
+  background-color: grey;
+}
+
+table.tabCra th.thHeaderCellRed {
+  width: 50px;
+  height : 10px;
+  background-color: red;
+}
+
+table.tabCra td.red {
+  width: 1px;
+  height : 10px;
+  background-color: mediumvioletred;
+}
+
+table.tabCra td.cellType {
+  width: 1px;
+  height : 10px;
+  background-color: #5A5E6B;
+}
+
+table.tabCra td.dayType {
+  width: 1px;
+  height : 10px;
+  background-color: #798081;
+}
+
+table.tabCra td.weekEndType {
+  width: 1px;
+  height : 10px;
+  background-color: #5A5E6B;
+}
+
+table.tabCra td:hover
+{
+  background-color: #766F64;
+  border: 2px solid darkred;
+}
+
+input[type="text"] {
+  background-color : white;
+  width : 30px;
+}
+input[type="text"].dayType {
+  background-color : white;
+  width : 1px;
+}
+input[type="text"].vide {
+  background-color : white;
+  width : 1px;
+}
+
+.icon {
+  float : left;
+  width : 250px;
+  height : 250px;
+}
+
+.icon25 {
+  float : left;
+  width : 25px;
+  height : 25px;
+}
+
+.icon_title {
+  position : relative;
+  top : 20%;
+  left : 15%;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+

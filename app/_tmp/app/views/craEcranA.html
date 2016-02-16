@@ -1,0 +1,107 @@
+
+
+<div ng-controller="CraEcranACtrl">
+  <form novalidate name="craForm" role="form" class="css-form form-inline well" ng-submit="submit()">
+    <img src="images/parasol.ico" alt="Congés" title="Congés" class="icon25">
+    <H3>Accueil CRA</H3>
+    <fieldset>
+
+      <div class="row">
+        <label for="sel" class="col-lg-3 control-label text">Type de congés :</label>
+        <div class="col-lg-3">
+          <select ng-model="conges.type" id="sel" ng-options="type.name for type in types" class="form-control" ></select>
+        </div>
+        <label for="motif" class="col-lg-2 text right"> Motif : </label>
+        <input type="text" name="motif" id="motif" ng-model="conges.motif" class="col-lg-4 form-control" ng-minlength="3" ng-maxlength="8" required>
+        <div ng-messages="craForm.motif.$error">
+          <p ng-message="minlength">Your name is too short.</p>
+          <p ng-message="maxlength">Your name is too long.</p>
+          <p ng-message="required">Your name is required.</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <label for="datedebut" class="col-lg-4 control-label text"> Date de début des congés incluse : </label>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <input type="text" id="datedebut" name="datedebut" class="form-control" ng-model="mission.dateDebut"   />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="checkbox">
+            <label for="matin1" class="control-label">
+              <input type="checkbox" name="checkboxDebut" id="matin1" ng-model="mission.check1Matin"  >
+              matin
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="aprem" class="checkbox">
+              <input type="checkbox" name="checkboxDebut" id="aprem" ng-model="mission.check1Aprem" ng-init="mission.check1Aprem=false" >
+              après midi
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="dateFin" class="col-lg-4 control-label text"> Date de fin des congés incluse : </label>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <input type="text" id="dateFin" name="dateFin" class="form-control"  ng-model="mission.dateFin" date-after="mission.dateDebut" />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="checkbox">
+            <label for="matin2" class="control-label">
+              <input type="checkbox" name="checkboxFin" id="matin2" ng-model="mission.check2Matin" ng-init="mission.check2Matin=false" >
+              matin
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <table class="table table-bordered table-striped table-condensed">
+            <caption>
+              <h4>Mon Solde</h4>
+            </caption>
+            <thead>
+            <tr>
+              <th>Type de congés</th>
+              <th></th>
+              <th>Solde</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>congés payés</td>
+              <td></td>
+              <td>{{ nbJoursCongesRestant }}</td>
+            </tr>
+            <tr>
+              <td>RTT</td>
+              <td></td>
+              <td>{{ nbJoursRttRestant }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      valid : {{craForm.motif.$valid}}
+      <label> Nombre de jours de congés : </label><span>{{nbJoursDemandes}}</span></span><br />  {{ nbJoursCongesRestant }} {{nbJoursDemandes}} {{ conges.dateDebut }}
+
+      <input class="btn btn-primary form-control" type="button" ng-click="" value="Reset"/>
+      <input class="btn btn-primary form-control" type="submit" ng-click="update(conges)" value="Save"/>
+      <input class="btn btn-primary form-control" type="submit" id="submit" value="Submit" />
+
+      <button ng-disabled="!craForm.motif.$valid" ng-click="go('/craEcranB')" class="btn btn-primary form-control">generer CRA</button>
+
+    </fieldset>
+  </form>
+
+
+  <pre>form = {{conges | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+
+</div>

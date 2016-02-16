@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<Root>
+   <CurTheme>
+      <Arrow V="K1.cur"/>
+      <Help V="K2.cur"/>
+      <AppStarting V="K3.ani"/>
+      <Wait V="K4.ani"/>
+      <Crosshair V="K5.cur"/>
+      <IBeam V="K6.cur"/>
+      <NWPen V="K7.cur"/>
+      <No V="K8.cur"/>
+      <SizeNS V="K9.cur"/>
+      <SizeWE V="K10.cur"/>
+      <SizeNWSE V="K11.cur"/>
+      <SizeNESW V="K12.cur"/>
+      <SizeAll V="K13.cur"/>
+      <UpArrow V="K14.cur"/>
+      <DefaultValue V="K15.cur"/>
+   </CurTheme>
+</Root>

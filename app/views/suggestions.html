@@ -1,0 +1,45 @@
+<div ng-controller="SuggestionsCtrl">
+	<form novalidate role="form" name="craForm" class="css-form well form-inline" ng-submit="submit()">
+		<div class="row">
+			<div class="col-lg-12">
+				<img ng-src="images/parasol.ico" alt="CRA" class="icon50 img-responsive">
+				
+			</div>
+		</div>
+
+	
+
+						<form name="myForm" >
+       <label>List: <input name="namesInput" ng-model="names" ng-list required></label>
+      <span role="alert">
+        <span class="error" ng-show="myForm.namesInput.$error.required">
+         Required!</span>
+       </span>
+       <br>
+       <tt>names = {{names}}</tt><br/>
+       <tt>myForm.namesInput.$valid = {{myForm.namesInput.$valid}}</tt><br/>
+       <tt>myForm.namesInput.$error = {{myForm.namesInput.$error}}</tt><br/>
+         <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+         <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+       </form>
+		
+		
+		<my-notif src="mail.png">
+            <header>Messages</header>
+            <span class="count">3</span>
+        </my-notif>
+		
+		  <div class="row">
+          <div class="col-lg-12 form-group">
+						<label for="newsuggestion" class="col-lg-4 control-label text">Suggestion: </label>
+            <input type="text" id="newsuggestion" ng-model="newsuggestion" class="form-control" placeholder="Entrez une tâche" required autofocus /> 
+						<button ng-click="add()" class="btn btn-success">Add</button>
+          </div>
+      </div>
+
+
+
+	<br />
+		
+
+	</div>

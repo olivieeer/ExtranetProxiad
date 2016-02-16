@@ -1,0 +1,109 @@
+<div ng-controller="CraEcranACtrl">
+  
+      <div class="row">
+        <div class="col-lg-12">
+          <img ng-src="images/calendar1.ico" alt="CRA" class="icon50 img-responsive">
+          <header class="page-header center">
+            <h3>Compte rendu d'activités de Mars 2016</h3>
+          </header>
+        </div>
+      </div>
+			
+		<form novalidate name="craForm" role="form" class="css-form form-inline well" ng-submit="submit()">
+			<fieldset>
+
+     <div class="row">
+				 <div class="form-group col-lg-6">
+					 <label for="sel" class="control-label text right">Type de congés:</label>
+					 <select ng-model="conges.type" id="sel" ng-options="type.name for type in types" class="form-control" ng-change="actualiseTypeConges()" ng-required="true"></select>
+				 </div>
+				 <div class="form-group col-lg-6">
+					 <label for="motif" class="control-label right"> Motif : </label>
+					 <input type="text" name="motif" id="motif" ng-model="conges.motif" class="form-control right" ng-minlength="3" ng-maxlength="8" >
+				 </div>
+       </div>
+
+
+      <div class="row">
+				<div class="form-group col-lg-12">
+					<div class="col-sm-12 col-lg-6">
+						<label for="datedebut" class=" control-label text">Date de début des congés incluse : </label>
+					</div>
+					<div class="form-group col-sm-12 col-lg-6">
+						<input type="text" id="datedebut" name="datedebut" class="form-control" date-picker ng-model="conges.datedebut" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+						<div class="checkbox">
+							<label for="matin1" class="control-label">
+								<input type="checkbox" name="checkboxDebut" id="matin1" class="form-control" ng-model="conges.check1Matin"  >
+								matin
+							</label>
+						</div>
+						<div class="checkbox">
+							<label for="aprem" class="checkbox">
+								<input type="checkbox" name="checkboxDebut" id="aprem" class="form-control" ng-model="conges.check1Aprem" ng-init="conges.check1Aprem=false" >
+								après midi
+							</label>
+						</div>
+					</div>
+				</div>
+      </div>
+
+      <div class="row">
+				<div class="form-group col-lg-12">
+					<div class="col-sm-12 col-lg-6">			
+						<label for="dateFin" class="control-label text">Date de fin des congés incluse : </label>
+					</div>	
+						<div class="form-group col-sm-12 col-lg-6">
+								<input type="text" id="dateFin" name="dateFin" class="form-control"  ng-model="conges.dateFin" date-after="conges.dateDebut" />
+							<div class="checkbox">
+								<label for="matin2" class="control-label">
+									<input type="checkbox" name="checkboxFin" id="matin2" class="form-control" ng-model="conges.check2Matin" ng-init="conges.check2Matin=false" >
+									matin
+								</label>
+							</div>
+						</div>
+				</div>	
+      </div>
+			
+			
+			<br />
+      <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+          <table class="table table-bordered table-striped table-condensed">
+            <caption>
+              <h4>Mon Solde</h4>
+            </caption>
+            <thead>
+            <tr>
+              <th>Type de congés</th>
+              <th>Solde</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>congés payés</td>
+              <td>{{ nbJoursCongesRestant }}</td>
+            </tr>
+            <tr>
+              <td>RTT</td>
+              <td>{{ nbJoursRttRestant }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <label> Nombre de jours de congés : </label><span>{{nbJoursDemandes}}</span></span><br />  {{ nbJoursCongesRestant }} {{nbJoursDemandes}} {{ conges.dateDebut }}
+
+      <button class="btn btn-primary form-control" type="reset" ng-click="" >Reset</button>
+      <input class="btn btn-primary form-control" type="submit" id="submit" value="Submit" />
+
+      <button ng-disabled="!craForm.motif.$valid" ng-click="go('/craEcranB')" class="btn btn-primary form-control">generer CRA</button>
+
+    </fieldset>
+  </form>
+
+
+  <pre>form = {{conges | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+
+</div>

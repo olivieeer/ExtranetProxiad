@@ -1,0 +1,80 @@
+<!-- Fichier my-notif.html, le template et ses styles -->
+<template id="my-notif">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #notif-layer {
+            border: 1px solid lightgray;
+        }
+
+        #notif-icon {
+            width: 16px;
+        }
+
+        ::content header {
+            display: inline;
+            font-weight: bold;
+        }
+    </style>
+
+    <div id="notif-layer">
+        <img id="notif-icon" src=""/>
+        <content select=".count"></content>
+        <content select="header"></content>
+    </div>
+
+
+</template>
+
+<!-- le script  -->
+<script>
+
+(function(window,document) {
+
+    <!-- Lors de son import notre script sera évalué dans de contexte du document qui l'importe
+    puisque notre script a besoin d'une référence au template du document importé, nous allons devoir ajouter un peu de logique ici.
+    Nous faisons référence à « importer » pour le document appelant et « importee » pour notre document composant dans cette closure.
+    -->
+    var importer = document;
+    var importee =  (importer.currentScript || importer._currentScript).ownerDocument;
+
+    <!-- Comme vu précédemment, on référence le template et un prototype de HTMLElement -->
+    var notifTemplate = importee.querySelector('#my-notif');
+    var notifProto = Object.create(HTMLElement.prototype);
+
+    <!-- On définit le prototype -->
+    notifProto.createdCallback = function() {
+
+        <!-- Le « Shadow Root » de l'élément courant -->
+        var shadowRoot = this.createShadowRoot();
+
+        <!-- Je veux que l url de mon composant soit définie dans un attribut src sur celui-ci
+          ainsi la déclaration pourra se faire de la manière suivante
+          <my-notif src='mon image'>
+            <header>le texte</header>
+            <span class='count'>un nombre</span>
+          </my-notif>
+          -->
+        if (this.hasAttribute('src')) {
+            this.imgSrc =  this.getAttribute('src');
+        } else {
+            this.imgSrc = '';
+        }
+
+        <!-- On injecte notre template qui sera instancié -->
+        shadowRoot.appendChild(importer.importNode(notifTemplate.content, true));
+        <!-- Sans oublier de mettre à jour l'url de l'image associée -->
+        shadowRoot.querySelector('img').setAttribute('src', this.imgSrc);
+    };
+
+    <!-- On enregistre notre nouveau type d'élément -->
+    var myNotif = importer.registerElement('my-notif', {prototype: notifProto});
+
+})(window, document);
+
+</script>
